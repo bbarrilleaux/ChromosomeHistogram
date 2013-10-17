@@ -1,5 +1,4 @@
 #Calculate distance from centromeres and telomeres as a fraction of the way across the chromosome and graph the results.
-#Using 
 
 library("ggplot2")
 
