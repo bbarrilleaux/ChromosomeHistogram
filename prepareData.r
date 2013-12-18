@@ -38,9 +38,9 @@ checkSpecies <- function(pdata) {
 
 fetchChromosomeLengths <- function(species) {
   if (species == "human") {
-    return(read.table("./HumanChromosomeLengths.txt", sep = "\t", header = TRUE))
+    return(read.table("./Data/HumanChromosomeLengths.txt", sep = "\t", header = TRUE))
   } else if (species == "mouse") {
-    return(read.table("./MouseChromosomeLengths.txt", sep = "\t", header = TRUE))
+    return(read.table("./Data/MouseChromosomeLengths.txt", sep = "\t", header = TRUE))
   } else {
     return()
   }
@@ -48,7 +48,7 @@ fetchChromosomeLengths <- function(species) {
 
 fetchCentromeres <- function(species) {
   if (species == "human") {
-    centromeres <- read.table("./HumanCentromerePositions.txt", sep = "\t")
+    centromeres <- read.table("./Data/HumanCentromerePositions.txt", sep = "\t")
   } else {
     #all mouse chromosomes are telocentric, so it's pointless to plot the centromeres.
     centromeres <- data.frame("chr1", 0, 0) 
