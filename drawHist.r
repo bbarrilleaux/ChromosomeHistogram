@@ -18,7 +18,7 @@ species <- checkSpecies(pdata)
 pdata <- rbind(pdata, fetchChromosomeLengths(species))
 centromeres <- fetchCentromeres(species)
 pdata$Chromosome <- factor(pdata$Chromosome, mixedsort(levels(pdata$Chromosome)))
-theme_set(theme_gray(base_size = 18)) # make fonts bigger
+theme_set(theme_gray(base_size = 36)) # make fonts bigger
 png(paste(file, "-graph.png", sep = ""), type="cairo-png", width = 1800, height=1200)
   hist_results <- ggplot(pdata, aes(x = loc/1000000, weight = size)) +
     geom_freqpoly(size = 2) + xlab("Position along chromosome (Mbp)") + ylab("Intensity") 
