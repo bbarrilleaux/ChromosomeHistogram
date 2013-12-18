@@ -10,7 +10,8 @@ Sample output:
 -------
 
 This is a graph of H1 human embryonic stem cell peaks for the transcription factor Ctcf, using data downloaded from [Encode][Encode].
-![Histogram](https://raw.github.com/biobonnie/ChromosomeHistogram/master/EncodeH1CtcfPeaks.png)
+
+![Histogram](https://raw.github.com/biobonnie/ChromosomeHistogram/master/Data/EncodeH1CtcfPeaks.png)
 
 These graphs are useful for detecting large-scale trends in genomic data, such as:
  - sequencing/mapping errors that lead to large portions of a chromosome having no reads mapped to it
