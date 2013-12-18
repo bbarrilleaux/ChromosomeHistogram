@@ -9,7 +9,7 @@ The intensity values could be peak height, fold change between samples, or any o
 Sample output: 
 -------
 
-![Histogram](https://raw.github.com/biobonnie/ChromosomeHistogram/master/H3K4me3-downinKOpeaks.png)
+![Histogram](https://raw.github.com/biobonnie/ChromosomeHistogram/master/EncodeH1CtcfPeaks.png)
 
 These graphs are useful for detecting large-scale trends in genomic data, such as:
  - sequencing/mapping errors that lead to large portions of a chromosome having no reads mapped to it
@@ -20,7 +20,9 @@ These graphs are useful for detecting large-scale trends in genomic data, such a
 Usage:
 -----
 
-*drawHist.sh*: Generates graphs of all files in the current directory with a "bed" extension, saving them as PNG files with the same name appended with "-graph.png". 
+*drawHist.sh*: One-line shell script to generate graphs of all files in the current directory with a "bed" extension, with no score data, saving them as PNG files with the same name appended with "-graph.png". Call with no arguments.
+
+*drawHist.r*: Call it like this: `Rscript drawHist.r filename startcol endcol scorecol`, where the three col numbers indicate which columns contain the relevant pieces of information. Enter 0 for endcol and/or scorecol to ignore those columns in the analysis. 
 
 [ggplot2]: http://ggplot2.org
 [facet wrapping]: http://wiki.stdout.org/rcookbook/Graphs/Facets%20(ggplot2)/
