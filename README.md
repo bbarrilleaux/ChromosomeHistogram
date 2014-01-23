@@ -22,9 +22,12 @@ These graphs are useful for detecting large-scale trends in genomic data, such a
 Usage:
 -----
 
-*drawHist.sh*: One-line shell script to generate graphs of all files in the current directory with a "bed" extension, with no score data, saving them as PNG files with the same name appended with "-graph.png". Call with no arguments.
+You'll need R installed, along with the libraries ggplot2 and gtools. 
 
-*drawHist.r*: Call it like this: `Rscript drawHist.r filename startcol endcol scorecol`, where the three col numbers indicate which columns contain the relevant pieces of information. Enter 0 for endcol and/or scorecol to ignore those columns in the analysis. 
+*drawHist.sh*: One-line shell script to generate graphs of all files in the current directory with a "bed" extension, not using any score data, saving the graphs as PNG files with the same name appended with "-graph.png". Call with no arguments. 
+
+*drawHist.r*: Call it like this: `Rscript drawHist.r filename startcol endcol scorecol`, where "filename" is the name of a file of genomic locations (in a format such as BED or GFF). The three col numbers indicate which columns contain the relevant pieces of information. Enter 0 for endcol and/or scorecol to ignore those columns in the analysis. 
+
 
 [R]: http://cran.r-project.org
 [ggplot2]: http://ggplot2.org
